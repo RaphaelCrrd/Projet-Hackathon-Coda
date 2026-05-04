@@ -175,22 +175,18 @@
   </nav>
 
   <div class="sketch-card">
-    <svg class="sketch-corner" style="top:-7px;left:-7px;width:20px;height:20px;" viewBox="0 0 20 20" aria-hidden="true"><path d="M2,18 L2,2 L18,2" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-    <svg class="sketch-corner" style="top:-7px;right:-7px;width:20px;height:20px;" viewBox="0 0 20 20" aria-hidden="true"><path d="M2,2 L18,2 L18,18" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-    <svg class="sketch-corner" style="bottom:-7px;left:-7px;width:20px;height:20px;" viewBox="0 0 20 20" aria-hidden="true"><path d="M2,2 L2,18 L18,18" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-    <svg class="sketch-corner" style="bottom:-7px;right:-7px;width:20px;height:20px;" viewBox="0 0 20 20" aria-hidden="true"><path d="M18,2 L18,18 L2,18" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-    <p class="sketch-title">LNE en bref</p>
-    <svg class="sketch-divider" viewBox="0 0 700 14" preserveAspectRatio="none" aria-hidden="true">
-    </svg>
-    <p class="sketch-intro">Loiret Nature Environnement est une association d'étude, de sensibilisation et de protection de la nature et de l'environnement.</p>
-    <p class="sketch-subtitle">Nos objectifs en quelques mots :</p>
-    <ul class="sketch-list">
-      <li>Mieux connaître pour préserver</li>
-      <li>Éduquer à l'environnement pour sensibiliser un large public</li>
-      <li>Agir pour plus d'éco-citoyenneté</li>
-    </ul>
-    <div class="sketch-footer">
-      <button class="sketch-btn">En savoir +</button>
+    <!-- Colonne gauche — contenu texte -->
+    <div class="sketch-content">
+      <p class="sketch-title">LNE en bref</p>
+      <p class="sketch-intro">Loiret Nature Environnement est une association d'étude, de sensibilisation et de protection de la nature et de l'environnement.</p>
+      <ul class="sketch-list">
+        <li>Mieux connaître pour préserver</li>
+        <li>Éduquer à l'environnement pour sensibiliser un large public</li>
+        <li>Agir pour plus d'éco-citoyenneté</li>
+      </ul>
+      <div class="sketch-footer">
+        <button class="sketch-btn">En savoir +</button>
+      </div>
     </div>
   </div>
 
@@ -226,11 +222,15 @@
     </div>
 
     <div class="cal-card">
-      <div class="cal-nav">
-        <button class="nav-btn" id="prev" aria-label="Mois précédent">&#9664;</button>
-        <div class="cal-title">Notre Agenda</div>
-        <div class="cal-month" id="month-label">Mai 2026</div>
-        <button class="nav-btn" id="next" aria-label="Mois suivant">&#9654;</button>
+      <div class="cal-header">
+        <div class="cal-title-block">
+          <div class="cal-title">Notre Agenda</div>
+          <div class="cal-month" id="month-label">Mai 2026</div>
+        </div>
+        <div class="cal-nav">
+          <button class="nav-btn" id="prev" aria-label="Mois précédent">&#9664;</button>
+          <button class="nav-btn" id="next" aria-label="Mois suivant">&#9654;</button>
+        </div>
       </div>
       <div class="cal-grid" id="cal-grid" role="grid">
         <div class="dow">Lun</div>
