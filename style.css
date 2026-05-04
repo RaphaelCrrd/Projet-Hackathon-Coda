@@ -658,7 +658,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    flex-wrap: wrap; /* Adaptable mobile */
+    flex-wrap: wrap; 
 }
 
 .footer-column {
@@ -669,7 +669,7 @@ nav {
 
 .footer-brand {
     font-weight: bold;
-    color: #F1871D; /* Orange pour le rappel visuel */
+    color: #F1871D; 
     margin-bottom: 10px;
 }
 
@@ -681,7 +681,7 @@ nav {
 
 .footer-column a {
     color: #ffffff;
-    text-decoration: underline; /* Standard pour l'accessibilité */
+    text-decoration: underline;
 }
 
 .footer-right {
@@ -692,7 +692,7 @@ nav {
     max-width: 120px;
     height: auto;
     margin-top: 10px;
-    /* On évite les filtres CSS lourds */
+    
 }
 
 .footer-bottom {
@@ -710,7 +710,6 @@ nav {
     text-decoration: none;
 }
 
-/* Version Mobile */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
