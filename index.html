@@ -160,6 +160,47 @@
     </button>
   </nav>
 
+  <!-- ===== HERO SLIDER ===== -->
+  <!--
+    ÉCO-CONCEPTION :
+    - Images hébergées localement (pas de CDN externe)
+    - Chargement différé : seule la 1ère image est chargée au départ (data-src pour les autres)
+    - Pas de filter CSS GPU (blur/brightness/saturate supprimés)
+    - Overlay CSS pur (dégradé, zéro requête réseau)
+    - Auto-play désactivé si prefers-reduced-motion
+    - Bouton pause pour que l'utilisateur contrôle
+  -->
+  <div class="hero-slider" aria-label="Diaporama Loiret Nature Environnement">
+    <!-- Slide 1 : chargée immédiatement -->
+    <div class="hero-slide active" style="background-image: url('slider/Renoncule.webp')" role="img" aria-label="Photo nature 1"></div>
+    <!-- Slides 2 & 3 : chargement différé via JS (data-src) -->
+    <div class="hero-slide" data-src="slider/CPN.webp" role="img" aria-label="Photo nature 2"></div>
+    <div class="hero-slide" data-src="slider/coquelicot.webp" role="img" aria-label="Photo nature 3"></div>
+
+    <!-- Overlay CSS pur — adoucit les images sans aucun calcul GPU -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Contenu : titre + slogan uniquement -->
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title-main">Loiret Nature</span>
+        <span class="hero-title-accent">Environnement</span>
+      </h1>
+      <p class="hero-subtitle">La protection de la nature et de la biodiversité dans le Loiret</p>
+    </div>
+
+    <!-- Contrôles : points + pause -->
+    <div class="hero-controls" aria-label="Contrôles du diaporama">
+      <button class="hero-dot active" role="tab" aria-selected="true"  aria-label="Diapositive 1" data-slide="0"></button>
+      <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Diapositive 2" data-slide="1"></button>
+      <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Diapositive 3" data-slide="2"></button>
+    </div>
+
+    <!-- Flèches navigation -->
+    <button class="hero-arrow hero-arrow--prev" aria-label="Diapositive précédente">&#8249;</button>
+    <button class="hero-arrow hero-arrow--next" aria-label="Diapositive suivante">&#8250;</button>
+  </div>
+
   <div class="sketch-card">
     <div class="sketch-content">
       <p class="sketch-title">LNE en bref</p>
