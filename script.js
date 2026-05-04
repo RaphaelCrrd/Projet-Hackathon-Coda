@@ -65,3 +65,16 @@ document.getElementById('prev').onclick = () => { month--; if (month < 0) { mont
 document.getElementById('next').onclick = () => { month++; if (month > 11) { month = 0; year++; } render(); };
 
 render();
+
+document.querySelectorAll('.nav-links > li').forEach(li => {
+  let timer;
+  li.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+    li.querySelector('.dropdown')?.classList.add('open');
+  });
+  li.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+      li.querySelector('.dropdown')?.classList.remove('open');
+    }, 150);
+  });
+});
