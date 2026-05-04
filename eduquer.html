@@ -9,17 +9,132 @@
 </head>
 <body>
 
-      <nav>
+      <!-- Décors latéraux nature — deux bandes fixes gauche/droite, jamais sur le contenu -->
+  <div class="side-deco side-deco--left" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 900" preserveAspectRatio="xMidYMid meet">
+      <!-- tiges verticales -->
+      <path d="M20,900 Q15,700 8,520 Q2,360 22,180" stroke="#3a9a50" stroke-width="1.5" fill="none" opacity="0.18" stroke-linecap="round"/>
+      <path d="M50,900 Q47,720 40,550 Q35,390 58,200" stroke="#2a7a38" stroke-width="1.2" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M80,900 Q76,740 72,580 Q68,420 88,260" stroke="#5ab840" stroke-width="1" fill="none" opacity="0.11" stroke-linecap="round"/>
+      <path d="M110,900 Q108,760 105,600 Q102,460 118,300" stroke="#3a9a50" stroke-width="0.9" fill="none" opacity="0.09" stroke-linecap="round"/>
+      <!-- feuilles sur tiges -->
+      <path d="M22,470 Q-2,440 4,405 Q28,415 22,470Z" fill="#3a9a50" opacity="0.16"/>
+      <path d="M50,370 Q24,342 30,308 Q56,320 50,370Z" fill="#6ab840" opacity="0.14"/>
+      <path d="M18,300 Q-8,268 0,235 Q24,248 18,300Z" fill="#2a7a38" opacity="0.13"/>
+      <path d="M65,520 Q40,494 46,462 Q72,470 65,520Z" fill="#5ab840" opacity="0.12"/>
+      <path d="M42,215 Q20,190 26,160 Q50,172 42,215Z" fill="#3a9a50" opacity="0.11"/>
+      <path d="M80,640 Q56,618 60,588 Q84,596 80,640Z" fill="#6ab840" opacity="0.10"/>
+      <path d="M100,430 Q78,410 82,382 Q105,390 100,430Z" fill="#2a7a38" opacity="0.09"/>
+      <!-- fougère coin bas gauche -->
+      <path d="M0,900 Q28,820 12,762" stroke="#2a7a38" stroke-width="2" fill="none" opacity="0.16" stroke-linecap="round"/>
+      <path d="M12,762 Q36,732 22,706" stroke="#3a9a50" stroke-width="1.3" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M12,762 Q-4,736 6,710" stroke="#3a9a50" stroke-width="1.3" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M22,706 Q44,680 32,656" stroke="#6ab840" stroke-width="1.1" fill="none" opacity="0.12" stroke-linecap="round"/>
+      <path d="M22,706 Q6,682 16,656" stroke="#6ab840" stroke-width="1.1" fill="none" opacity="0.12" stroke-linecap="round"/>
+      <path d="M32,656 Q52,634 42,614" stroke="#5ab840" stroke-width="0.9" fill="none" opacity="0.10" stroke-linecap="round"/>
+      <path d="M32,656 Q18,634 26,614" stroke="#5ab840" stroke-width="0.9" fill="none" opacity="0.10" stroke-linecap="round"/>
+      <!-- hérisson bas gauche -->
+      <ellipse cx="90" cy="840" rx="42" ry="24" fill="#8B6914" opacity="0.16"/>
+      <path d="M52,826 Q44,806 58,800 Q60,818 52,826Z" fill="#555533" opacity="0.16"/>
+      <path d="M64,818 Q58,796 72,792 Q74,810 64,818Z" fill="#555533" opacity="0.16"/>
+      <path d="M78,812 Q76,790 92,786 Q92,806 78,812Z" fill="#555533" opacity="0.16"/>
+      <path d="M94,812 Q94,790 108,792 Q107,808 94,812Z" fill="#555533" opacity="0.16"/>
+      <path d="M108,818 Q112,798 124,802 Q120,818 108,818Z" fill="#555533" opacity="0.16"/>
+      <ellipse cx="50" cy="836" rx="11" ry="9" fill="#c8a040" opacity="0.16"/>
+      <circle cx="47" cy="832" r="2.5" fill="#442200" opacity="0.18"/>
+      <rect x="62" y="858" width="8" height="7" rx="2" fill="#8B6914" opacity="0.13"/>
+      <rect x="80" y="860" width="8" height="7" rx="2" fill="#8B6914" opacity="0.13"/>
+      <rect x="98" y="860" width="8" height="7" rx="2" fill="#8B6914" opacity="0.13"/>
+      <rect x="114" y="858" width="8" height="7" rx="2" fill="#8B6914" opacity="0.13"/>
+      <!-- écureuil milieu -->
+      <path d="M120,448 Q96,418 104,388 Q128,398 134,430 Q136,445 120,448Z" fill="#c05a10" opacity="0.14"/>
+      <ellipse cx="130" cy="468" rx="18" ry="22" fill="#c05a10" opacity="0.15"/>
+      <circle cx="122" cy="450" r="13" fill="#c05a10" opacity="0.15"/>
+      <path d="M116,440 Q113,426 120,424 Q122,436 116,440Z" fill="#c05a10" opacity="0.15"/>
+      <path d="M128,438 Q127,424 136,424 Q137,436 128,438Z" fill="#c05a10" opacity="0.15"/>
+      <circle cx="118" cy="450" r="3" fill="#1a1a00" opacity="0.17"/>
+      <ellipse cx="113" cy="456" rx="6" ry="5" fill="#d4784a" opacity="0.13"/>
+      <path d="M116,476 Q106,490 104,500" stroke="#c05a10" stroke-width="3.5" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <circle cx="102" cy="504" r="7" fill="#c8960a" opacity="0.13"/>
+      <!-- papillon haut -->
+      <path d="M60,110 Q36,86 40,66 Q66,70 60,110Z" fill="#f5c842" opacity="0.16"/>
+      <path d="M80,110 Q104,86 100,66 Q76,70 80,110Z" fill="#f5c842" opacity="0.16"/>
+      <path d="M62,116 Q42,132 46,148 Q65,140 62,116Z" fill="#e8a520" opacity="0.13"/>
+      <path d="M78,116 Q98,132 94,148 Q75,140 78,116Z" fill="#e8a520" opacity="0.13"/>
+      <ellipse cx="70" cy="112" rx="3.5" ry="15" fill="#2a1a00" opacity="0.16"/>
+      <path d="M68,97 Q62,84 57,78" stroke="#2a1a00" stroke-width="1.1" fill="none" opacity="0.16" stroke-linecap="round"/>
+      <path d="M72,97 Q78,84 83,78" stroke="#2a1a00" stroke-width="1.1" fill="none" opacity="0.16" stroke-linecap="round"/>
+      <!-- herbes bas -->
+      <path d="M30,900 Q28,872 24,848" stroke="#3a9a50" stroke-width="1.2" fill="none" opacity="0.13" stroke-linecap="round"/>
+      <path d="M45,900 Q43,874 40,852" stroke="#5ab840" stroke-width="1" fill="none" opacity="0.11" stroke-linecap="round"/>
+      <path d="M140,900 Q140,876 138,855" stroke="#2a7a38" stroke-width="1" fill="none" opacity="0.10" stroke-linecap="round"/>
+      <path d="M155,900 Q157,878 155,858" stroke="#3a9a50" stroke-width="0.9" fill="none" opacity="0.09" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="side-deco side-deco--right" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 900" preserveAspectRatio="xMidYMid meet">
+      <!-- tiges verticales (miroir) -->
+      <path d="M140,900 Q145,700 152,520 Q158,360 138,180" stroke="#3a9a50" stroke-width="1.5" fill="none" opacity="0.18" stroke-linecap="round"/>
+      <path d="M110,900 Q113,720 120,550 Q125,390 102,200" stroke="#2a7a38" stroke-width="1.2" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M80,900 Q84,740 88,580 Q92,420 72,260" stroke="#5ab840" stroke-width="1" fill="none" opacity="0.11" stroke-linecap="round"/>
+      <path d="M50,900 Q52,760 55,600 Q58,460 42,300" stroke="#3a9a50" stroke-width="0.9" fill="none" opacity="0.09" stroke-linecap="round"/>
+      <!-- feuilles sur tiges -->
+      <path d="M138,470 Q162,440 156,405 Q132,415 138,470Z" fill="#3a9a50" opacity="0.16"/>
+      <path d="M110,370 Q136,342 130,308 Q104,320 110,370Z" fill="#6ab840" opacity="0.14"/>
+      <path d="M142,300 Q168,268 160,235 Q136,248 142,300Z" fill="#2a7a38" opacity="0.13"/>
+      <path d="M95,520 Q120,494 114,462 Q88,470 95,520Z" fill="#5ab840" opacity="0.12"/>
+      <path d="M118,215 Q140,190 134,160 Q110,172 118,215Z" fill="#3a9a50" opacity="0.11"/>
+      <path d="M80,640 Q104,618 100,588 Q76,596 80,640Z" fill="#6ab840" opacity="0.10"/>
+      <path d="M60,430 Q82,410 78,382 Q55,390 60,430Z" fill="#2a7a38" opacity="0.09"/>
+      <!-- fougère coin bas droite -->
+      <path d="M160,900 Q132,820 148,762" stroke="#2a7a38" stroke-width="2" fill="none" opacity="0.16" stroke-linecap="round"/>
+      <path d="M148,762 Q124,732 138,706" stroke="#3a9a50" stroke-width="1.3" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M148,762 Q164,736 154,710" stroke="#3a9a50" stroke-width="1.3" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M138,706 Q116,680 128,656" stroke="#6ab840" stroke-width="1.1" fill="none" opacity="0.12" stroke-linecap="round"/>
+      <path d="M138,706 Q154,682 144,656" stroke="#6ab840" stroke-width="1.1" fill="none" opacity="0.12" stroke-linecap="round"/>
+      <path d="M128,656 Q108,634 118,614" stroke="#5ab840" stroke-width="0.9" fill="none" opacity="0.10" stroke-linecap="round"/>
+      <path d="M128,656 Q142,634 134,614" stroke="#5ab840" stroke-width="0.9" fill="none" opacity="0.10" stroke-linecap="round"/>
+      <!-- grenouille bas droite -->
+      <ellipse cx="75" cy="848" rx="24" ry="15" fill="#4a9a30" opacity="0.16"/>
+      <circle cx="59" cy="836" r="8" fill="#4a9a30" opacity="0.16"/>
+      <circle cx="91" cy="836" r="8" fill="#4a9a30" opacity="0.16"/>
+      <circle cx="59" cy="835" r="4" fill="#1a1a00" opacity="0.17"/>
+      <circle cx="91" cy="835" r="4" fill="#1a1a00" opacity="0.17"/>
+      <path d="M52,858 Q36,872 28,866 Q36,854 50,852Z" fill="#4a9a30" opacity="0.14"/>
+      <path d="M98,858 Q114,872 122,866 Q114,854 100,852Z" fill="#4a9a30" opacity="0.14"/>
+      <path d="M62,860 Q54,872 50,866" stroke="#4a9a30" stroke-width="3.5" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <path d="M88,860 Q96,872 100,866" stroke="#4a9a30" stroke-width="3.5" fill="none" opacity="0.14" stroke-linecap="round"/>
+      <!-- libellule haut droite -->
+      <ellipse cx="80" cy="80" rx="34" ry="5.5" fill="#7ecfcf" opacity="0.15" transform="rotate(-12 80 80)"/>
+      <ellipse cx="80" cy="84" rx="34" ry="5.5" fill="#7ecfcf" opacity="0.12" transform="rotate(12 80 84)"/>
+      <ellipse cx="80" cy="82" rx="22" ry="4" fill="#7ecfcf" opacity="0.12" transform="rotate(-26 80 82) translate(16,7)"/>
+      <ellipse cx="80" cy="82" rx="22" ry="4" fill="#7ecfcf" opacity="0.12" transform="rotate(26 80 82) translate(-16,7)"/>
+      <ellipse cx="80" cy="84" rx="4.5" ry="15" fill="#3a8a90" opacity="0.16"/>
+      <circle cx="80" cy="71" r="6" fill="#2a6a70" opacity="0.16"/>
+      <!-- abeille milieu -->
+      <ellipse cx="30" cy="400" rx="15" ry="10" fill="#f5c842" opacity="0.16"/>
+      <rect x="18" y="393" width="7" height="13" rx="2" fill="#1a1a00" opacity="0.13"/>
+      <rect x="26" y="393" width="7" height="13" rx="2" fill="#1a1a00" opacity="0.13"/>
+      <rect x="34" y="393" width="7" height="13" rx="2" fill="#1a1a00" opacity="0.13"/>
+      <ellipse cx="30" cy="390" rx="9" ry="7" fill="#1a1a00" opacity="0.14"/>
+      <ellipse cx="16" cy="392" rx="11" ry="6" fill="rgba(200,235,255,0.6)" opacity="0.18" transform="rotate(-30 16 392)"/>
+      <ellipse cx="44" cy="392" rx="11" ry="6" fill="rgba(200,235,255,0.6)" opacity="0.18" transform="rotate(30 44 392)"/>
+      <!-- herbes bas -->
+      <path d="M130,900 Q132,872 136,848" stroke="#3a9a50" stroke-width="1.2" fill="none" opacity="0.13" stroke-linecap="round"/>
+      <path d="M115,900 Q117,874 120,852" stroke="#5ab840" stroke-width="1" fill="none" opacity="0.11" stroke-linecap="round"/>
+      <path d="M20,900 Q20,876 22,855" stroke="#2a7a38" stroke-width="1" fill="none" opacity="0.10" stroke-linecap="round"/>
+      <path d="M5,900 Q3,878 5,858" stroke="#3a9a50" stroke-width="0.9" fill="none" opacity="0.09" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <nav>
     <div class="logo">
-      <img src="logo.png" alt="Loiret Nature Environnement">
+      <a href="#"><img src="logo.png" alt="Loiret Nature Environnement" width="120" height="52"></a>
     </div>
-
     <ul class="nav-links">
-
       <li><a href="#">Qui sommes-nous ?</a></li>
-
       <li><a href="eduquer.html">Éduquer &amp; Sensibiliser</a></li>
-
       <li>
         <span>Inventaire &amp; Expertises <span class="chevron">▾</span></span>
         <ul class="dropdown">
@@ -29,7 +144,6 @@
           <li><a href="#">Cartographie &amp; SIG</a></li>
         </ul>
       </li>
-
       <li>
         <span>Réserve naturelle de Saint-Mesmin <span class="chevron">▾</span></span>
         <ul class="dropdown">
@@ -39,7 +153,6 @@
           <li><a href="#">Actualités de la réserve</a></li>
         </ul>
       </li>
-
       <li>
         <span>Nos actions <span class="chevron">▾</span></span>
         <ul class="dropdown">
@@ -49,18 +162,19 @@
           <li><a href="#">Partenariats</a></li>
         </ul>
       </li>
-
     </ul>
-
     <a class="login-btn" href="#">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="8" r="4"/>
         <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
       </svg>
       Connexion
     </a>
-
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
+    <script src="script-nav.js"></script>
 </body>
 </html>
