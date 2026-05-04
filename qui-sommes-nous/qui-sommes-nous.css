@@ -117,6 +117,31 @@ nav {
   white-space: nowrap;
 }
 
+@media (max-width: 1260px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  .logo {
+    margin-right: 12px;
+  }
+
+  .logo img {
+    height: 46px;
+  }
+
+  .nav-links > li > a,
+  .nav-links > li > span {
+    font-size: 14px;
+    padding: 6px 9px;
+  }
+
+  .login-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}
+
 .nav-links > li > a:hover,
 .nav-links > li > span:hover {
   background: #eaf3de;
@@ -221,8 +246,8 @@ nav {
 /* Contenu page */
 
 .qsn-page {
-  width: min(1100px, calc(100% - 32px));
-  margin: 28px 16px 48px;
+  width: min(1280px, calc(100% - 24px));
+  margin: 28px auto 48px;
   display: grid;
   gap: 28px;
   position: relative;
@@ -234,7 +259,7 @@ nav {
   border: 2px solid #1f1f1f;
   border-radius: 14px;
   box-shadow: 4px 4px 0 #1f1f1f;
-  padding: 20px;
+  padding: 36px;
   color: #fff;
 }
 
@@ -287,7 +312,7 @@ nav {
 
 @media (min-width: 940px) {
   .qsn-layout {
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: clamp(320px, 30vw, 380px) minmax(0, 1fr);
     align-items: stretch;
   }
 
@@ -297,6 +322,17 @@ nav {
 
   .qsn-menu .menu-card {
     height: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .qsn-page {
+    width: calc(100% - 20px);
+    margin: 24px auto 42px;
+  }
+
+  .qsn-layout {
+    gap: 24px;
   }
 }
 
@@ -564,16 +600,18 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1120px) {
   nav {
     min-height: 72px;
     padding: 12px 14px;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
   }
 
   .logo {
-    margin-right: auto;
+    margin-right: 0;
+    order: 1;
   }
 
   .login-btn {
@@ -582,11 +620,15 @@ nav {
 
   .burger {
     display: inline-flex;
+    order: 2;
+    margin-left: auto;
   }
 
   .nav-links {
     display: none;
     width: 100%;
+    order: 3;
+    flex-basis: 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
@@ -634,13 +676,13 @@ nav {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1260px) {
   .side-deco {
     width: 80px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1120px) {
   .side-deco {
     display: none;
   }
