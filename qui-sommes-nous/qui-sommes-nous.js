@@ -56,17 +56,17 @@
 
   navLinks.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
-      if (window.innerWidth <= 920) closeMenu();
+      if (window.innerWidth <= 1120) closeMenu();
     });
   });
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 920) closeMenu();
+    if (window.innerWidth > 1120) closeMenu();
   });
 
   document.querySelectorAll(".nav-links > li > span").forEach(function (span) {
     span.addEventListener("click", function (e) {
-      if (window.innerWidth <= 920) {
+      if (window.innerWidth <= 1120) {
         e.stopPropagation();
         const dropdown = span.nextElementSibling;
         if (dropdown) dropdown.classList.toggle("open");
