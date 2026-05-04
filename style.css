@@ -355,9 +355,9 @@ nav {
 /* --- SECTION ACTUALITÉS (ENTIER) --- */
 .news-simple {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1275px;
   margin: 30px auto;
-  background: #3f6950; /* Ta couleur de fond principale */
+  background: #3f6950;
   border-radius: 30px;
   display: flex;
   align-items: stretch;
@@ -390,7 +390,7 @@ nav {
 /* Zone Image sans le fond vert foncé */
 .news-image-box {
   flex: 0 0 40%;
-  background: transparent; /* Suppression du vert foncé ici */
+  background: transparent; 
   display: flex;
   align-items: center;
   justify-content: center;
