@@ -522,38 +522,20 @@ nav {
 .day.today        { background: #004B1C; color: #fff; outline: 2.5px solid #6a9e1f; outline-offset: 1px; }
 
 /* ===== HERO SLIDER — ÉCO-RESPONSABLE ===== */
-/*
-  Choix éco :
-  - Pas de filter CSS (blur/brightness/saturate) → zéro surcharge GPU
-  - Pas de backdrop-filter → zéro surcharge GPU
-  - Pas de radial-gradient en double couche → overlay simplifié
-  - Transition opacity seule (accélérée nativement par le navigateur)
-  - will-change absent : on ne pré-alloue pas de mémoire GPU inutilement
-*/
-.hero-slider {
+/* ===== HERO IMAGE SIMPLE ===== */
+.hero-image {
   position: relative;
   width: 100%;
   height: 520px;
   overflow: hidden;
   z-index: 1;
-  background: #002e10; /* couleur de fond affichée avant le chargement des images */
-}
-
-.hero-slide {
-  position: absolute;
-  inset: 0;
+  background-image: url('slider/Renoncule.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease;
-  /* ✅ Aucun filter CSS — la qualité des images est masquée par l'overlay CSS pur ci-dessous */
+  background-color: #002e10;
 }
 
-.hero-slide.active {
-  opacity: 1;
-}
-
-/* Overlay CSS pur : un seul dégradé linéaire, zéro requête réseau, zéro GPU */
+/* Overlay dégradé */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -618,84 +600,8 @@ nav {
   text-shadow: 0 1px 6px rgba(0,0,0,0.50);
 }
 
-/* Contrôles groupés : points + pause */
-.hero-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.hero-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.38);
-  border: 1.5px solid rgba(255,255,255,0.50);
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.2s, transform 0.2s;
-}
-.hero-dot.active {
-  background: #6ab840;
-  border-color: #6ab840;
-  transform: scale(1.28);
-}
-
-/* Bouton pause : petit, discret, accessible */
-.hero-pause {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.30);
-  border: 1.5px solid rgba(255,255,255,0.35);
-  color: #fff;
-  font-size: 11px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s;
-  margin-left: 4px;
-}
-.hero-pause:hover { background: rgba(0,75,28,0.55); }
-
-/* Flèches navigation */
-.hero-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 4;
-  background: rgba(0,0,0,0.22);
-  border: 1.5px solid rgba(255,255,255,0.22);
-  color: #fff;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 26px;
-  cursor: pointer;
-  /* ✅ Pas de backdrop-filter : économise le GPU */
-  transition: background 0.18s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-arrow:hover { background: rgba(0,75,28,0.50); }
-.hero-arrow--prev { left: 18px; }
-.hero-arrow--next { right: 18px; }
-
-/* Accessibilité : pas d'animation si l'utilisateur le préfère */
-@media (prefers-reduced-motion: reduce) {
-  .hero-slide { transition: none; }
-}
-
 @media (max-width: 600px) {
-  .hero-slider { height: 400px; }
-  .hero-arrow  { display: none; }
+  .hero-image { height: 400px; }
 }
 
 /* ===== RESPONSIVE ===== */
