@@ -722,4 +722,84 @@ nav {
   }
 }
 
+/* Footer accueil */
+.lne-footer-eco {
+  width: 100%;
+  background-color: #2d5a43;
+  color: #ffffff;
+  padding: 40px 0 20px 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin-top: 40px;
+  position: relative;
+  z-index: 999;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-brand {
+  font-weight: bold;
+  color: #f1871d;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer-column a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.eco-logo {
+  max-width: 120px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.footer-bottom a {
+  color: #f1871d;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
 
