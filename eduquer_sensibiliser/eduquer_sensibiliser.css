@@ -88,9 +88,35 @@
     }
     .login-btn svg { width: 16px; height: 16px; }
 
+    .burger {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #004b1c;
+    border-radius: 10px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: background .15s ease;
+    }
+    .burger:hover { background: #eaf3de; }
+    .burger span {
+    width: 18px;
+    height: 2px;
+    background: #004b1c;
+    border-radius: 2px;
+    transition: transform .2s ease, opacity .2s ease;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ---- Contenu page (même gabarit que qsn-page) ---- */
     .edu-page {
-    width: min(1100px, calc(100% - 32px));
+    width: min(1280px, calc(100% - 20px));
     margin: 28px 16px 48px;
     display: grid;
     gap: 28px;
@@ -137,12 +163,21 @@
         display: grid;
         grid-template-columns: 320px 1fr;
         gap: 30px;
-        align-items: start;
+        align-items: stretch;
+    }
+
+    .edu-menu {
+        align-self: start;
+        min-height: 0;
+        display: flex;
+        justify-content: center;
     }
 
     .edu-menu .menu-card {
-        position: sticky;
-        top: 88px;
+        height: auto;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .edu-content {
@@ -159,8 +194,13 @@
     .top-pair {
         grid-column: span 2;
         display: grid;
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         gap: 28px;
+    }
+
+    .top-pair > .info-card {
+        grid-column: 1 / -1;
     }
 
     .stats-grid {
@@ -228,6 +268,23 @@
     .badges-list { margin: 10px 0 4px 24px; display: grid; gap: 5px; }
 
     .edu-content { display: grid; gap: 28px; }
+
+.top-pair > .info-card,
+.info-card--last {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+}
+
+@media (min-width: 940px) {
+    .top-pair > .info-card,
+    .info-card--last {
+        min-height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
     .info-card {
     background: #f8f8ed;
@@ -353,14 +410,140 @@
     .cta-actions { margin-top: 0; flex: 0 0 auto; justify-content: flex-end; }
     }
 
+    @media (max-width: 1120px) {
+    nav {
+    min-height: 72px;
+    height: auto;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    }
+    .logo {
+    margin-right: 0;
+    order: 1;
+    }
+    .login-btn { display: none; }
+    .burger {
+    display: inline-flex;
+    order: 2;
+    margin-left: auto;
+    }
+    .nav-links {
+    display: none;
+    width: 100%;
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: #fff;
+    border: 1px solid #c0dd97;
+    border-radius: 12px;
+    padding: 8px;
+    justify-content: flex-start;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links > li > a, .nav-links > li > span {
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 12px;
+    }
+    .dropdown {
+    position: static;
+    display: none;
+    transform: none;
+    min-width: 0;
+    margin-top: 6px;
+    border-radius: 10px;
+    border-width: 1px;
+    width: 100%;
+    }
+    }
     @media (max-width: 680px) {
-    nav { height: auto; padding: 12px 14px; flex-wrap: wrap; gap: 10px; }
-    .logo { margin-right: 0; }
-    .nav-links { justify-content: flex-start; flex-wrap: wrap; gap: 6px; }
-    .nav-links > li > a, .nav-links > li > span { font-size: 14px; padding: 6px 10px; }
     .stats-grid { grid-template-columns: 1fr; }
     .edu-hero { padding: 16px; }
     .menu-title { font-size: 22px; }
     }
     @media (max-width: 1100px) { .side-deco { width: 80px; } }
     @media (max-width: 800px) { .side-deco { display: none; } }
+
+    .lne-footer-eco {
+    width: 100%;
+    background-color: #2d5a43;
+    color: #ffffff;
+    padding: 40px 0 20px 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin-top: 40px;
+    position: relative;
+    z-index: 999;
+    }
+    .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    }
+    .footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    }
+    .footer-brand {
+    font-weight: bold;
+    color: #f1871d;
+    margin-bottom: 10px;
+    }
+    .footer-column p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    }
+    .footer-column a {
+    color: #ffffff;
+    text-decoration: underline;
+    }
+    .footer-right { text-align: right; }
+    .eco-logo {
+    max-width: 120px;
+    height: auto;
+    margin-top: 10px;
+    }
+    .footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    }
+    .footer-bottom a {
+    color: #f1871d;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    }
+    main a:not(.cta-btn):not(.cta-btn-secondary) {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    }
+    @media (max-width: 768px) {
+    .edu-layout,
+    .info-card--last,
+    .cta-card,
+    .lne-footer-eco {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+    }
+
+    .footer-content {
+    flex-direction: column;
+    text-align: center;
+    }
+    .footer-right { text-align: center; }
+    }

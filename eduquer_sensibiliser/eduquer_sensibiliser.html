@@ -182,12 +182,12 @@
 
   <nav aria-label="Navigation principale">
     <div class="logo">
-      <a href="../index.html"><img src="../logo.png" alt="Loiret Nature Environnement"></a>
+      <a href="../index.html"><img src="../logo.png" alt="Loiret Nature Environnement" width="120" height="52" fetchpriority="high" decoding="async"></a>
     </div>
 
     <ul class="nav-links">
       <li><a href="../qui-sommes-nous/qui-sommes-nous.html">Qui sommes-nous ?</a></li>
-      <li><a href="#">Éduquer &amp; Sensibiliser</a></li>
+      <li><a href="eduquer_sensibiliser.html" aria-current="page">Éduquer &amp; Sensibiliser</a></li>
       <li>
         <span>Inventaire &amp; Expertises <span class="chevron">▾</span></span>
         <ul class="dropdown">
@@ -246,6 +246,26 @@
         <span>Partenaire Éducation Nationale</span>
       </div>
     </header>
+
+    <article class="info-card info-card--education-top">
+      <h2>Éducation à l'Environnement et au Développement Durable</h2>
+      <p>
+        Nos animateurs/guides naturalistes sont des professionnels de l'éducation à l'environnement.
+        Ils sont à votre écoute pour vous accompagner dans vos projets d'éducation à l'environnement
+        et au développement durable.
+      </p>
+      <p>
+        Partenaire agréé par l'Éducation Nationale, Loiret Nature Environnement est aussi adhérente
+        du <strong>GRAINE Centre-Val de Loire</strong> et signataire du Référentiel régional de qualité
+        de l'éducation à l'environnement en région Centre-Val de Loire — un véritable gage de qualité
+        pour votre projet pédagogique.
+      </p>
+      <p>
+        Dans tous les cas, les animations sont considérées comme un véritable complément dans l'étude
+        ou l'approche d'un sujet relatif à l'EEDD, et s'intègrent dans le projet pédagogique de
+        l'enseignant ou de l'établissement scolaire.
+      </p>
+    </article>
 
     <div class="edu-layout">
 
@@ -317,29 +337,8 @@
 
       <section class="edu-content">
 
-  <!-- 🔹 BLOC ALIGNÉ AVEC LA SIDEBAR -->
+  <!-- 🔹 STATS -->
   <div class="top-pair">
-
-    <article class="info-card">
-      <h2>Éducation à l'Environnement et au Développement Durable</h2>
-      <p>
-        Nos animateurs/guides naturalistes sont des professionnels de l'éducation à l'environnement.
-        Ils sont à votre écoute pour vous accompagner dans vos projets d'éducation à l'environnement
-        et au développement durable.
-      </p>
-      <p>
-        Partenaire agréé par l'Éducation Nationale, Loiret Nature Environnement est aussi adhérente
-        du <strong>GRAINE Centre-Val de Loire</strong> et signataire du Référentiel régional de qualité
-        de l'éducation à l'environnement en région Centre-Val de Loire — un véritable gage de qualité
-        pour votre projet pédagogique.
-      </p>
-      <p>
-        Dans tous les cas, les animations sont considérées comme un véritable complément dans l'étude
-        ou l'approche d'un sujet relatif à l'EEDD, et s'intègrent dans le projet pédagogique de
-        l'enseignant ou de l'établissement scolaire.
-      </p>
-    </article>
-
     <div class="stats-grid" aria-label="Chiffres clés">
       <div class="stat">
         <p class="stat-value">3</p>
@@ -354,7 +353,6 @@
         <p class="stat-label">publics concernés</p>
       </div>
     </div>
-
   </div>
 
   <!-- 🔹 GRILLE 2 PAR 2 -->  
@@ -400,13 +398,13 @@
     </div>
   </article>
 
-  <article class="info-card info-card--last">
-  <h2>Durée, lieux et sujets possibles</h2>
-  <p>D'une durée d'une demi-journée minimum, nous pouvons nous adapter à toute demande suivant la thématique abordée. Il peut s'agir d'un cycle sur plusieurs jours consécutifs ou non. Les animations ont lieu sur le terrain mais peuvent aussi avoir lieu en classe avec des supports pédagogiques originaux, innovants et adaptés au niveau des classes.</p>
-  </article>
-
 </section>
     </div>
+
+    <article class="info-card info-card--last">
+      <h2>Durée, lieux et sujets possibles</h2>
+      <p>D'une durée d'une demi-journée minimum, nous pouvons nous adapter à toute demande suivant la thématique abordée. Il peut s'agir d'un cycle sur plusieurs jours consécutifs ou non. Les animations ont lieu sur le terrain mais peuvent aussi avoir lieu en classe avec des supports pédagogiques originaux, innovants et adaptés au niveau des classes.</p>
+    </article>
 
     <article class="cta-card" aria-label="Nous contacter">
       <h2>Envie de monter un projet pédagogique&nbsp;?</h2>
@@ -422,13 +420,100 @@
 
   </main>
 
+  <footer class="lne-footer-eco">
+    <div class="footer-content">
+      <div class="footer-column">
+        <p class="footer-brand">Maison de la Nature et de l'Environnement</p>
+        <p>64, route d'Olivet, 45100 Orleans</p>
+        <p>Email : <a href="mailto:asso@lne45.org">asso@lne45.org</a></p>
+      </div>
+
+      <div class="footer-column">
+        <p>Tel : 02 38 56 69 84</p>
+        <p>Fax : 02 38 56 33 48</p>
+      </div>
+
+      <div class="footer-column footer-right">
+        <p>Loiret Nature Environnement est une association membre de :</p>
+        <img src="../footer.png" alt="Logo LNE" class="eco-logo" loading="lazy" decoding="async" width="120" height="120">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2026 Loiret Nature Environnement | Realisation : Coda | <a href="../politique-confidentialite/politique-confidentialite.html">Confidentialite</a></p>
+    </div>
+  </footer>
+
   <script>
-    document.querySelectorAll('.nav-links > li').forEach(li => {
-      const dd = li.querySelector('.dropdown');
-      if (!dd) return;
-      li.addEventListener('mouseenter', () => dd.classList.add('open'));
-      li.addEventListener('mouseleave', () => dd.classList.remove('open'));
-    });
+    if (window.matchMedia("(max-width: 800px)").matches) {
+      document.querySelectorAll(".side-deco").forEach((node) => node.remove());
+    }
+  </script>
+
+  <script>
+    (() => {
+      const navLinks = document.querySelector(".nav-links");
+      const burger = document.getElementById("burger");
+      if (!navLinks || !burger) return;
+
+      function closeMenu() {
+        navLinks.classList.remove("open");
+        burger.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+        navLinks.querySelectorAll(".dropdown").forEach(dd => dd.classList.remove("open"));
+      }
+
+      document.querySelectorAll(".nav-links > li").forEach(li => {
+        let timer;
+        li.addEventListener("mouseenter", () => {
+          clearTimeout(timer);
+          const dd = li.querySelector(".dropdown");
+          if (dd && window.innerWidth > 1120) dd.classList.add("open");
+        });
+        li.addEventListener("mouseleave", () => {
+          timer = setTimeout(() => {
+            const dd = li.querySelector(".dropdown");
+            if (dd && window.innerWidth > 1120) dd.classList.remove("open");
+          }, 150);
+        });
+      });
+
+      burger.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        burger.classList.toggle("open", isOpen);
+        burger.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      document.querySelectorAll(".nav-links > li > span").forEach(span => {
+        span.addEventListener("click", event => {
+          if (window.innerWidth > 1120) return;
+          event.stopPropagation();
+          const dropdown = span.nextElementSibling;
+          if (!dropdown) return;
+          dropdown.classList.toggle("open");
+        });
+      });
+
+      document.addEventListener("click", event => {
+        if (!burger.contains(event.target) && !navLinks.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 1120) closeMenu();
+        });
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1120) closeMenu();
+      });
+    })();
   </script>
 </body>
 </html>

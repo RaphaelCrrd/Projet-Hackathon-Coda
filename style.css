@@ -790,10 +790,26 @@ nav {
 
 .footer-bottom a {
     color: #F1871D;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+main a:not(.cta-btn):not(.cta-btn-secondary) {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
 }
 
 @media (max-width: 768px) {
+    .sketch-card,
+    .news-simple,
+    .bg,
+    .lne-footer-eco {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 600px;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;

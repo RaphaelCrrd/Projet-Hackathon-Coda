@@ -147,6 +147,11 @@ nav {
   background: #eaf3de;
 }
 
+.nav-links > li > a[aria-current="page"] {
+  background: #eaf3de;
+  color: #004b1c;
+}
+
 .chevron {
   font-size: 9px;
   color: #7ab87a;
@@ -255,7 +260,7 @@ nav {
 /* Contenu page */
 
 .qsn-page {
-  width: min(1280px, calc(100% - 24px));
+  width: min(1360px, calc(100% - 20px));
   margin: 28px auto 48px;
   display: grid;
   gap: 28px;
@@ -269,7 +274,7 @@ nav {
   border-radius: 14px;
   box-shadow: 4px 4px 0 #1f1f1f;
   padding: 36px;
-  color: #fff;
+  color: #111;
 }
 
 .hero-kicker {
@@ -334,7 +339,7 @@ nav {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1360px) {
   .qsn-page {
     width: calc(100% - 20px);
     margin: 24px auto 42px;
@@ -788,10 +793,25 @@ nav {
 
 .footer-bottom a {
   color: #f1871d;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+main a:not(.cta-btn):not(.cta-btn-secondary) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 768px) {
+  .qsn-layout,
+  .cta-card,
+  .lne-footer-eco {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;

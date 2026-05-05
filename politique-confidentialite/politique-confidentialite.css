@@ -251,7 +251,7 @@ nav {
 
 .privacy-hero {
   background: linear-gradient(145deg, #f5a623 0%, #ef8d16 100%);
-  color: #fff;
+  color: #1c2f18;
   border: 2px solid #1f1f1f;
   box-shadow: 4px 4px 0 #1f1f1f;
   border-radius: 14px;
@@ -264,6 +264,7 @@ nav {
   letter-spacing: 1px;
   font-size: 13px;
   margin-bottom: 8px;
+  color: #2a4a1e;
 }
 
 .privacy-hero h1 {
@@ -281,7 +282,7 @@ nav {
 .privacy-hero .updated {
   margin-top: 10px;
   font-size: 13px;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .summary-card,
@@ -334,6 +335,9 @@ nav {
 .privacy-footer a {
   color: #0f5f30;
   font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
   transition: color 0.15s ease;
 }
 
@@ -363,7 +367,9 @@ nav {
   align-items: center;
   justify-content: center;
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -378,7 +384,7 @@ nav {
 .privacy-footer a:hover {
   background: #0f7e3c;
   transform: translateY(-1px);
-  text-decoration: none;
+  text-decoration-thickness: 2px;
 }
 
 @media (max-width: 1120px) {
@@ -521,10 +527,26 @@ nav {
 
 .footer-bottom a {
   color: #f1871d;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+main a:not(.cta-btn):not(.cta-btn-secondary) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 768px) {
+  .summary-card,
+  .privacy-content,
+  .privacy-block,
+  .lne-footer-eco {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;

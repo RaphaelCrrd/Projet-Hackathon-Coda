@@ -115,7 +115,7 @@
 
   <nav>
     <div class="logo">
-      <a href="index.html"><img src="logo.png" alt="Loiret Nature Environnement" width="120" height="52"></a>
+      <a href="index.html"><img src="logo.png" alt="Loiret Nature Environnement" width="120" height="52" fetchpriority="high" decoding="async"></a>
     </div>
     <ul class="nav-links">
       <li><a href="qui-sommes-nous/qui-sommes-nous.html">Qui sommes-nous ?</a></li>
@@ -196,7 +196,7 @@
       </div>
     </div>
     <div class="news-image-box">
-      <img src="imagenews.png" alt="Agenda">
+      <img src="imagenews.png" alt="Agenda" loading="lazy" decoding="async">
     </div>
   </div>
 
@@ -228,7 +228,12 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    if (window.matchMedia("(max-width: 800px)").matches) {
+      document.querySelectorAll(".side-deco").forEach((node) => node.remove());
+    }
+  </script>
+  <script src="script.js" defer></script>
 </body>
 
 <footer class="lne-footer-eco">
@@ -246,7 +251,7 @@
 
         <div class="footer-column footer-right">
             <p>Loiret Nature Environnement est une association membre de :</p>
-            <img src="footer.png" alt="Logo LNE" class="eco-logo">
+            <img src="footer.png" alt="Logo LNE" class="eco-logo" loading="lazy" decoding="async" width="120" height="120">
         </div>
     </div>
 
